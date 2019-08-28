@@ -98,23 +98,31 @@
         </section>
         <section class="search">
             <h2>Заинтересовались?</h2>
-            <p> укажите предпологаемые даты поездки, и мы окажем вам лучшие предложения гостиниц в Седоне</p>
+            <p> укажите предпологаемые даты поездки,<br> и мы окажем вам лучшие предложения гостиниц в Седоне</p>
             <button type="button" class="btn-search">Поиск гостинницы в Седоне</button>
-            <img src="img/map-img.jpg" alt="карта седоны">
         </section>
+        <div class="map">
+            <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+                <p class="date-arrival">
+                    <label for="date-arrival">Время заезда:</label>
+                    <input type="date" id="date-arrival" name="date-arrival">
+                </p>
+                <p class="date-departure">
+                    <label for="date-departure">Время выезда:</label>
+                    <input type="date" id="date-departure" name="date-departure">
+                </p>
+                <p class="mature">
+                    <label for="mature">взрослые</label>
+                    <input type="number" id="mature" name="mature" value="2">
+                </p>
+                <p class="children">
+                    <label for="children">дети</label>
+                    <input type="number" id="children" name="children" value="0">
+                </p>
+                <button type="submit" class="btn-find" action="https://echo.htmlacademy.ru">найти</button>
 
-        <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-            <label for="date-arrival">Время заезда:</label>
-            <input type="date" id="date-arrival" name="date-arrival">
-            <label for="date-departure">Время выезда:</label>
-            <input type="date" id="date-departure" name="date-departure">
-            <label for="mature">взрослые</label>
-            <input type="number" id="mature" name="mature" value="2">
-            <label for="children">дети</label>
-            <input type="number" id="children" name="children" value="0">
-            <button type="submit" class="btn-find" action="https://echo.htmlacademy.ru">найти</button>
-
-        </form>
+            </form>
+        </div>
     </main>
     <footer>
         <div class="container">

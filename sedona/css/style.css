@@ -226,6 +226,18 @@ img {
     margin: 0 auto;
     padding: 0;
     flex-direction: column;
+    background-color: #fff;
+}
+
+.search h2 {
+    margin: 50px auto 0;
+    font-size: 28px;
+}
+
+.search p {
+    margin: 30px auto;
+    max-width: 480px;
+    text-align: center;
 }
 
 .btn-search {
@@ -235,7 +247,7 @@ img {
     height: 86px;
     border: none;
     background-color: #766357;
-    
+    margin: 12px auto 0;
     text-transform: uppercase;
     color: #fff;
     font-size: 21px;
@@ -275,13 +287,56 @@ img {
     color: #7aadcb;
 }
 
-.search-form {
+.map {
     font-weight: 700;
+    background-image: url(/sedona/img/map-img.jpg);
+    height: 595px;
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 570px;
+    min-height: 395px;
+    padding: 50px;
+}
+
+.search-form p{
+    display: block;
+    margin: 0;
+    margin-bottom: 10px;
+    background-color: rgba(255,0,0,0.3)
+}
+
+.search-form label{
+    display: inline-block;
 }
 
 .search-form input{
+    box-sizing: border-box;
     border: none;
     background-color: #f2f2f2;
+    padding: 11px 10px;
+}
+
+.date-arrival{
+    width: 100%;
+}
+
+.date-departure {
+    width: 100%;
+}
+
+footer {
+    margin-top: -109px;
+    background-color: rgba(255,255,255,0.8)
 }
 
 footer a{
