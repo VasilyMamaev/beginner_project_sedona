@@ -296,7 +296,11 @@ img {
     
 }
 
-.search-form {
+.search-form-disabled {
+    display: none;
+}
+
+.search-form-enebled {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -308,17 +312,6 @@ img {
     padding: 50px;
 }
 
-.search-form p{
-    display: block;
-    margin: 0;
-    margin-bottom: 10px;
-    background-color: rgba(255,0,0,0.3)
-}
-
-.search-form label{
-    display: inline-block;
-}
-
 .search-form input{
     box-sizing: border-box;
     border: none;
@@ -326,11 +319,34 @@ img {
     padding: 11px 10px;
 }
 
-.date-arrival{
+.form-item{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
-.date-departure {
+.date-arrival input,
+.date-departure input{
+    width: 348px;
+    font-weight: 700;
+}
+
+.mature,
+.children{
+    width: auto;
+}
+
+.mature input,
+.children input{
+    width: 114px;
+    margin-left: 36px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.search-form button{
     width: 100%;
 }
 
