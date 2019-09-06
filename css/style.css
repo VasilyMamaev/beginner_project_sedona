@@ -27,6 +27,24 @@ img {
     height: auto;
     max-height: 100%;
 }
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    
+    clip-path: insert(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 /* главная страница */
 .main-navigation {
     color: #000;
@@ -445,21 +463,98 @@ footer a {
     width: 1200px;
     margin: 0 auto;
     color: #fff;
+    padding-top: 15px;
     
 }
 
+.search-characteristic {
+    display: flex;
+    
+}
+
+.search-infrastructure,
+.search-house {
+    border: 0;
+}
+
+.search-infrastructure ul,
+.search-house ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 160px;
+    margin: 0;
+}
+
+.search-infrastructure li,
+.search-house li {
+    position: relative;
+}
+
+.hotel-checkbox input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: -3px;
+    left: -38px;;
+    
+    width: 21px;
+    height: 21px;
+    border:3px solid #fff; 
+    border-radius: 5px;
+}
+
+.hotel-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+    border-color: #81b3d2;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.hotel-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+    content: "";
+    
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    
+    width: 10px;
+    height: 4px;
+    
+    background-color: #fff;
+    
+    transform: rotate(45deg);
+}
+
+.hotel-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+    content: "";
+    
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    
+    width: 20px;
+    height: 4px;
+    
+    background-color: #fff;
+    
+    transform: rotate(-45deg);
+}
 .search-characteristic{
     display: flex;
 }
 
 .search-first {
     display: flex;
+    margin-left: 50px;
+}
+
+.search-third {
     margin-left: 70px;
 }
 
 .search-second {
     display: flex;
     flex-direction: column;
+    margin-left: 350px;
 }
 
 .search-characteristic button{
@@ -478,9 +573,68 @@ footer a {
     color: #000;
 }
 
-.search-item a {
-    color: #000;
+.search-head{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    align-items: center;
 }
+
+.search-head h2,
+.search-head p,
+.search-head ul{
+    margin-left: 32px;
+}
+
+.sort-by {
+    list-style: none;
+    display: flex;
+}
+
+.search-results{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-item {
+    width: 1200px;
+    height: 150px;
+    margin: 1px auto;
+    background-color: #fff;
+    display: flex;
+    align-items: center; 
+}
+
+.search-item .img-item {
+    color: #000;
+    margin-left: 73px;
+    margin-top: 15px;
+}
+
+.search-item .item-content {
+    margin-left: 30px;
+    max-height: 90px;
+}
+
+.item-content h3 {
+    margin: 0;
+}
+.item-content p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.item-content span{
+    margin-right: 30px;
+}
+
+.search-item .item-rate {
+    margin-left: 520px;
+}
+
 .search-item a:hover,
 .search-item a:focus{
     color: #81b3d2;
@@ -489,9 +643,7 @@ footer a {
     color: #b2b2b2;
 }
 
-.sort-by {
-    list-style: none;
-}
+
 #icon-up-dir,
 #icon-down-dir{ 
     stroke:#cacaca; fill: #cacaca;
@@ -553,4 +705,8 @@ footer a {
 .button-reserve span:active{
     background-color: #503e33;
     color: #857871;
+}
+
+.inner-page .footer-container{
+    margin: 0 auto;
 }
